@@ -1,0 +1,187 @@
+@import '../../mixins.scss';
+
+@font-face {
+  font-family: Graphik;
+  src: url("../../fonts/graphik-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight : 200;
+  src: url("../../fonts/graphik-extra-light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight : 300;
+  src: url("../../fonts/graphik-light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight : 500;
+  src: url("../../fonts/graphik-medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight : 600;
+  src: url("../../fonts/graphik-semi-bold.otf") format("opentype");
+}
+
+[data-payment-page-component="admin-elementor-templates"] {
+  --payment-page-font-family : Graphik, serif;
+  font-family : Graphik, serif;
+
+  > [data-payment-page-component-admin-elementor-templates-section="template_list"] {
+    background     : var( --payment-page-layout-primary-background-color );
+    margin         : 0;
+    overflow       : hidden;
+    padding        : 30px;
+    border         : 1px solid #DAE4F1;
+    display               : grid;
+    grid-template-columns : repeat(3, 1fr);
+    gap                   : 50px 30px;
+
+    @include border-radius( 10px );
+    @include box-sizing( border-box );
+
+    > [data-payment-page-component-admin-elementor-templates-section="template_information"] {
+      display: flex;
+      flex-direction: column;
+
+      > img {
+        max-width : 100%;
+      }
+
+      > [data-payment-page-component-admin-elementor-templates-section="dependency_text"] {
+        padding     : 10px;
+        color       : #6798DB;
+        font-size   : 16px;
+        font-weight : 400;
+        display        : flex;
+        flex-direction : row;
+        align-items    : center;
+        align-content  : center;
+        margin         : 0 auto;
+
+        > span {
+          margin: 0 5px;
+        }
+
+        > img {
+          max-height : 16px;
+        }
+      }
+
+      > [data-payment-page-component-admin-elementor-templates-section="template_operations"] {
+        display               : grid;
+        grid-template-columns : repeat(2, 1fr);
+        gap                   : 10px 10px;
+
+        > [data-payment-page-component-admin-elementor-templates-trigger],
+        > [data-payment-page-component-admin-elementor-templates-section] {
+          font-weight : 500;
+          font-size   : 13px;
+          text-align  : center;
+          color           : #fff;
+          display         : block;
+          padding         : 12px 0 10px 0;
+          text-decoration : unset;
+          line-height     : 1;
+          cursor          : pointer;
+
+          @include border-radius( 10px );
+
+          > .payment-page-application-loader-wrapper[data-payment-page-loader-type="mini"] {
+            margin : 0 auto;
+          }
+
+          &[disabled="disabled"] {
+            background : var( --payment-page-status-neutral-background-color );
+            color      : var( --payment-page-text-color-primary );
+            cursor : not-allowed;
+          }
+        }
+
+        > [data-payment-page-component-admin-elementor-templates-trigger],
+        > [data-payment-page-component-admin-elementor-templates-section="upgrade"] {
+          background      : transparent linear-gradient(90deg, #1168EF 0%, #76ACF7 100%) 0 0 no-repeat padding-box;
+        }
+
+        > [data-payment-page-component-admin-elementor-templates-section="preview"] {
+          background      : transparent linear-gradient(90deg, #37BD90 0%, #6CDCB2 100%) 0 0 no-repeat padding-box;
+        }
+      }
+
+      > [data-payment-page-notification] {
+        margin : 20px 0 0 0;
+      }
+    }
+
+    [data-payment-page-component-admin-elementor-templates-section="placeholder"]{
+      text-align   : center;
+      color        : var( --payment-page-primary-color );
+      font-weight  : 400;
+      font-size    : 27px;
+      line-height  : 33px;
+      display       : flex;
+      align-content : center;
+      align-items   : center;
+
+      > span {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &[data-payment-page-template-count-odd="0"] {
+      [data-payment-page-component-admin-elementor-templates-section="placeholder"]{
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  @media (max-width: $break_point_x_large_width) {
+    > [data-payment-page-component-admin-elementor-templates-section="template_list"] {
+      grid-template-columns : repeat(2, 1fr);
+      gap                   : 40px 20px;
+
+      > [data-payment-page-component-admin-elementor-templates-section="template_information"] {
+
+        > [data-payment-page-component-admin-elementor-templates-section="dependency_text"] {
+          font-size : 18px;
+
+          > img {
+            max-height : 21px;
+          }
+        }
+
+        > [data-payment-page-component-admin-elementor-templates-section="template_operations"] {
+          > [data-payment-page-component-admin-elementor-templates-trigger],
+          > [data-payment-page-component-admin-elementor-templates-section] {
+            font-size : 22px;
+            padding   : 15px 0 13px 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $break_point_medium_width) {
+    > [data-payment-page-component-admin-elementor-templates-section="template_list"] {
+      grid-template-columns : 100%;
+      gap                   : 20px 20px;
+      padding               : 20px;
+    }
+  }
+}
+
+@keyframes payment-page-admin-elementor-templates-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity : 1;
+  }
+}

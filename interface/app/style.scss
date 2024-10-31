@@ -1,0 +1,177 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+body.toplevel_page_payment-page,
+body.post-type-pp_payment_form {
+  background : #F4FBFF;
+}
+
+#wpadminbar {
+  .payment-page-top-bar-item {
+    &.is-test {
+      background : #f1c40f;
+    }
+
+    &.is-mixed {
+      background : #e67e22;
+    }
+
+    &.is-live {
+      background : #2ecc71;
+    }
+  }
+
+  .payment-page-child-bar-item {
+    &.is-test > a {
+      color : #f1c40f !important;
+    }
+
+    &.is-live > a {
+      color : #2ecc71 !important;
+    }
+  }
+}
+
+[data-payment-page-component] {
+  width       : 100%;
+  margin      : 0;
+  padding     : 0;
+  font-family : var( --payment-page-font-family );
+
+  @include box-sizing( border-box );
+
+  h1,h2,h3,h4,h5,h6,p,a, ul > li, ol > li {
+    font-family : var( --payment-page-font-family );
+  }
+}
+
+[data-payment-page-display-state="visible"] {
+  @include transition( color 0.45s cubic-bezier(0.23, 1, 0.32, 1) );
+}
+
+[data-payment-page-display-state="hidden"] {
+  display : none !important;
+}
+
+[data-payment-page-display-state="opaque"] {
+  opacity : 0.3 !important;
+}
+
+[data-payment-page-display-state="active"] {
+  color : var( --payment-page-primary-color );
+}
+
+.payment-page-clearfix {
+  clear   : both;
+  float   : none;
+  opacity : 0;
+  display : block;
+}
+
+[data-payment-page-library="clipboard"] {
+  display : flex;
+  flex-direction: row;
+
+  > input {
+    padding: 2px 5px !important;
+  }
+
+  > [data-payment-page-button] {
+    --payment-page-icon-primary-color : #ffffff;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position : relative;
+    width: 36px;
+    height: 36px;
+    margin : 0 0 0 6px;
+
+    svg {
+      @include payment-page-icon-primary(); //ss
+    }
+
+    > span,
+    > svg {
+      position : absolute;
+      top: 50%;
+      left: 50%;
+      width : 24px;
+      height : 24px;
+
+      transform: translate(-50%, -50%);
+    }
+
+    > span > svg {
+      width : 24px;
+      height : 24px;
+
+      --payment-page-icon-primary-color : var( --payment-page-status-success-color );
+    }
+  }
+}
+
+@import 'style/elements/attribute-based/button.scss';
+@import 'style/elements/attribute-based/hint.scss';
+@import 'style/elements/attribute-based/notification.scss';
+
+@import 'style/elements/class-based/application-loader.scss';
+@import 'style/elements/class-based/popup.scss';
+
+[data-payment-page-library="wpmedia"] {
+  display : grid;
+  max-width : 640px;
+
+  > img, > input {
+    display: none !important;
+  }
+
+  > video {
+    display: none;
+  }
+
+  &[data-payment-page-interaction-state="uploaded"] {
+    > img, > video {
+      width: 100%;
+      display: block !important;
+      cursor: pointer;
+      max-width: 212px;
+      margin-bottom : var( --payment-page-spacing-sm );
+    }
+
+    > [data-payment-page-component-form-section="actions"] {
+      margin: auto 0 0 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var( --payment-page-spacing-sm );
+
+      > [data-payment-page-library-wpmedia-trigger^="set_"] {
+        display : none !important;
+      }
+
+      > [data-payment-page-library-wpmedia-trigger^="edit_"] {
+        display : inline-block !important;
+        vertical-align: middle !important;
+        background-color: var( --payment-page-gray-button-color-primary ) !important;
+        color: var( --payment-page-gray-button-color-text ) !important;
+
+        &:hover {
+          background-color: var( --payment-page-gray-button-color-hover ) !important;
+        }
+      }
+
+      > [data-payment-page-library-wpmedia-trigger^="remove_"] {
+        display : inline-block !important;
+        vertical-align: middle !important;
+      }
+    }
+  }
+
+  > [data-payment-page-component-form-section="actions"] {
+    > [data-payment-page-library-wpmedia-trigger^="edit_"],
+    > [data-payment-page-library-wpmedia-trigger^="remove_"] {
+      display : none;
+    }
+  }
+}

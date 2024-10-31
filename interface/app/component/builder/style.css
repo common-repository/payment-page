@@ -1,0 +1,72 @@
+[data-payment-page-component="builder"] {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--payment-page-layout-primary-background-color);
+  border: 1px solid #DAE4F1;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+  [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] {
+    padding: 0;
+    margin: 0 var(--payment-page-spacing-sm) 0 0;
+    border-right: 1px solid var(--payment-page-layout-primary-border-color);
+    width: 400px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px; }
+    [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="header"] {
+      display: flex;
+      flex-direction: row;
+      -webkit-border-radius: 10px 0 0 0;
+      border-radius: 10px 0 0 0; }
+      [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="header"] > [data-payment-page-component-builder-trigger] {
+        box-sizing: border-box;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column; }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="header"] > [data-payment-page-component-builder-trigger] > span {
+          padding: var(--payment-page-spacing-sm) var(--payment-page-spacing-md);
+          font-size: 18px; }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="header"] > [data-payment-page-component-builder-trigger][data-payment-page-interaction-state="inactive"] {
+          cursor: pointer; }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="header"] > [data-payment-page-component-builder-trigger][data-payment-page-interaction-state="active"] {
+          background: var(--payment-page-primary-color);
+          color: #fff; }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="header"] > [data-payment-page-component-builder-trigger][data-payment-page-component-builder-trigger="show_section_content"] {
+          -webkit-border-radius: 10px 0 0 0;
+          border-radius: 10px 0 0 0; }
+    [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] {
+      display: flex;
+      flex-direction: column; }
+      [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div {
+        border-bottom: 1px solid var(--payment-page-layout-primary-border-color); }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div > p {
+          --payment-page-icon-primary-color: var( --payment-page-primary-color );
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          align-items: center;
+          gap: var(--payment-page-spacing-sm);
+          padding: 0 var(--payment-page-spacing-sm);
+          color: var(--payment-page-primary-color);
+          font-size: 16px;
+          line-height: 1.5em; }
+          [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div > p > svg {
+            width: 16px;
+            height: 16px; }
+            [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div > p > svg[data-payment-page-svg-type="fill"] {
+              fill: var(--payment-page-icon-primary-color); }
+            [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div > p > svg[data-payment-page-svg-type="stroke"] {
+              stroke: var(--payment-page-icon-primary-color); }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div > div {
+          padding: var(--payment-page-spacing-sm) var(--payment-page-spacing-md); }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div[data-payment-page-interaction-state="open"] {
+          padding-bottom: var(--payment-page-spacing-sm); }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div[data-payment-page-interaction-state="closed"] > p {
+          cursor: pointer; }
+          [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div[data-payment-page-interaction-state="closed"] > p > svg {
+            rotate: 270deg; }
+        [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="settings"] > [data-payment-page-component-builder-section="sections_wrapper"] > div[data-payment-page-interaction-state="closed"] > div {
+          display: none !important; }
+  [data-payment-page-component="builder"] > [data-payment-page-component-builder-section="preview"] {
+    width: calc( 100% - var(--payment-page-spacing-sm) - var(--payment-page-spacing-sm) - 1px - 400px);
+    margin: 0 var(--payment-page-spacing-sm) 0 0; }

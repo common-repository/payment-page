@@ -1,0 +1,317 @@
+<#
+  let _current_value = ( typeof data.field_information.default !== 'undefined' ? data.field_information.default : null );
+
+  if( typeof data.field_information.value !== "undefined" ) {
+    _current_value = data.field_information.value;
+  }
+#>
+
+<div data-payment-page-component-form-section="field_container_{{ data.field_information.type }}" data-payment-page-has-label="{{ data._has_label ? 1 : 0 }}">
+  <# if( data.field_information.type === "repeater_order" ) { #>
+    <span data-payment-page-component-form-trigger="order">{{{ PaymentPage.settings.svg_icon_map.element_order }}}</span>
+    <input type="hidden" name="{{ data.field_input_name }}" value="{{ _current_value !== null ? _current_value : '' }}" data-payment-page-scope="repeater_order"/>
+  <# } else if( data.field_information.type === "raw_html" ) { #>
+    {{{ data.field_information.html }}}
+  <# } else if( payment_page_in_array(data.field_information.type, [ "text", "number", "link", "url", "color" ] ) ) { #>
+    <input name="{{ data.field_input_name }}"
+           <# if( data.field_information.type === "text" ) { #>
+           type="text"
+           <# } else if( data.field_information.type === "number" ) { #>
+           type="number"
+           <# } else if( data.field_information.type === "link" || data.field_information.type === "url" ) { #>
+           type="url"
+           <# } else if( data.field_information.type === "color" ) { #>
+           type="text"
+           data-payment-page-library="colorpicker"
+           <# } #>
+           value="{{ _current_value !== null ? _current_value : '' }}"
+           placeholder="{{ typeof data.field_information.placeholder !== 'undefined' ? data.field_information.placeholder : '' }}"
+           <# if( typeof data.field_information.admin_label !== 'undefined' && data.field_information.admin_label ) { #>
+           data-payment-page-is-admin-label="1"
+           <# } #>
+           <# if( typeof data.field_information.readonly !== 'undefined' && data.field_information.readonly ) { #>
+             readonly="readonly"
+           <# } #>
+           <# if( typeof data.field_information.disabled !== 'undefined' && data.field_information.disabled === "disabled" ) { #>
+             disabled="disabled"
+           <# } #>
+           <# if( typeof data.field_information.attributes !== "undefined" ) { #>
+             <# _.each( data.field_information.attributes, function( attribute_value, attribute_name ) { #>
+                {{ attribute_name }}="{{ typeof attribute_value === "object" ? _.escape(JSON.stringify( attribute_value )) : attribute_value }}"
+             <# }) #>
+           <# } #>
+    />
+  <# } else if( payment_page_in_array(data.field_information.type, [ "css_style_border_color", "css_style_background_color" ] ) ) { #>
+    <input name="{{ data.field_input_name }}"
+           value="{{ _current_value !== null ? _current_value : '' }}"
+           type="text"
+           data-payment-page-library="colorpicker"
+           <# if( typeof data.field_information.attributes !== "undefined" ) { #>
+              <# _.each( data.field_information.attributes, function( attribute_value, attribute_name ) { #>
+                {{ attribute_name }}="{{ typeof attribute_value === "object" ? _.escape(JSON.stringify( attribute_value )) : attribute_value }}"
+              <# }) #>
+           <# } #>
+    />
+  <# } else if( data.field_information.type === "true_false" ) { #>
+    <input name="{{ data.field_input_name }}" type="hidden" value="0"/>
+    <label>
+      <input type="checkbox"
+             name="{{ data.field_input_name }}"
+             value="1"
+             {{{ _current_value !== null && "" + _current_value === "1" ? 'checked="checked"' : '' }}}
+             <# if( typeof data.field_information.disabled !== 'undefined' && data.field_information.disabled === "disabled" ) { #>
+             disabled="disabled"
+             <# } #>
+             <# if( typeof data.field_information.attributes !== "undefined" ) { #>
+               <# _.each( data.field_information.attributes, function( attribute_value, attribute_name ) { #>
+                 {{ attribute_name }}="{{ typeof attribute_value === "object" ? _.escape(JSON.stringify( attribute_value )) : attribute_value }}"
+               <# }) #>
+             <# } #>
+            >
+      <span data-payment-page-scope="label"
+            data-off="No"
+            data-on="Yes"></span>
+      <span data-payment-page-scope="handle"></span>
+    </label>
+  <# } else if( data.field_information.type === "toggle" ) { #>
+    <input name="{{ data.field_input_name }}" type="hidden" value="{{ data.field_information.toggle_value_off }}"/>
+    <label>
+      <input type="checkbox"
+             name="{{ data.field_input_name }}"
+             value="{{ data.field_information.toggle_value_on }}"
+             {{{ _current_value !== null && _current_value === data.field_information.toggle_value_on ? 'checked="checked"' : '' }}}
+             <# if( typeof data.field_information.disabled !== 'undefined' && data.field_information.disabled === "disabled" ) { #>
+             disabled="disabled"
+             <# } #>
+             <# if( typeof data.field_information.attributes !== "undefined" ) { #>
+               <# _.each( data.field_information.attributes, function( attribute_value, attribute_name ) { #>
+                  {{ attribute_name }}="{{ typeof attribute_value === "object" ? _.escape(JSON.stringify( attribute_value )) : attribute_value }}"
+               <# }) #>
+             <# } #>
+      >
+      <span data-payment-page-scope="label"
+            data-off="{{ data.field_information.toggle_label_off }}"
+            data-on="{{ data.field_information.toggle_label_on }}"></span>
+      <span data-payment-page-scope="handle"></span>
+    </label>
+  <# } else if( data.field_information.type === "css_style_unit" ) { #>
+    <#
+      if( !( _current_value instanceof Object ) ) {
+        _current_value = { unit : "", size : "" };
+      }
+
+      let _size_units = ( typeof data.field_information.size_units !== 'undefined' && data.field_information.size_units instanceof Array ? data.field_information.size_units : [ 'px', '%', 'em' ] );
+    #>
+    <input type="number" name="{{ data.field_input_name }}[size]" value="{{ typeof _current_value.size !== 'undefined' ? _current_value.size : '' }}"/>
+    <select name="{{ data.field_input_name }}[unit]">
+      <# _.each( _size_units, function( unit ) { #>
+        <option value="{{ unit }}" {{{ _current_value.unit === unit ? 'selected="selected"' : '' }}}>{{ unit }}</option>
+      <# }) #>
+    </select>
+  <# } else if( data.field_information.type === "css_style_unit_dimensions" ) { #>
+    <#
+      if( !( _current_value instanceof Object ) ) {
+        _current_value = { unit : "", size_1 : "", size_2 : "", size_3 : "", size_4 : "" };
+      }
+
+      let _size_units = ( typeof data.field_information.size_units !== 'undefined' && data.field_information.size_units instanceof Array ? data.field_information.size_units : [ 'px', '%', 'em' ] );
+    #>
+    <ul>
+      <li>
+        <input type="number" name="{{ data.field_input_name }}[size_1]" value="{{ typeof _current_value.size_1 !== 'undefined' ? _current_value.size_1 : ( typeof _current_value.size !== 'undefined' ? _current_value.size : '' ) }}"/>
+        <span>Top</span>
+      </li>
+      <li>
+        <input type="number" name="{{ data.field_input_name }}[size_2]" value="{{ typeof _current_value.size_2 !== 'undefined' ? _current_value.size_2 : ( typeof _current_value.size !== 'undefined' ? _current_value.size : '' ) }}"/>
+        <span>Right</span>
+      </li>
+      <li>
+        <input type="number" name="{{ data.field_input_name }}[size_3]" value="{{ typeof _current_value.size_3 !== 'undefined' ? _current_value.size_3 : ( typeof _current_value.size !== 'undefined' ? _current_value.size : '' ) }}"/>
+        <span>Bottom</span>
+      </li>
+      <li>
+        <input type="number" name="{{ data.field_input_name }}[size_4]" value="{{ typeof _current_value.size_4 !== 'undefined' ? _current_value.size_4 : ( typeof _current_value.size !== 'undefined' ? _current_value.size : '' ) }}"/>
+        <span>Left</span>
+      </li>
+    </ul>
+    <select name="{{ data.field_input_name }}[unit]">
+      <# _.each( _size_units, function( unit ) { #>
+      <option value="{{ unit }}" {{{ _current_value.unit === unit ? 'selected="selected"' : '' }}}>{{ unit }}</option>
+      <# }) #>
+    </select>
+  <# } else if( data.field_information.type === "message_builder" ) { #>
+    <#
+      if( !( _current_value instanceof Object ) ) {
+        _current_value = { token_map : {}, token_order : [] };
+      }
+
+      if( typeof _current_value.token_order === 'undefined' ) {
+        _current_value = { token_map : {}, token_order : [] };
+      }
+    #>
+    <ul data-payment-page-scope="field_list">
+      <# _.each( data.field_information.pieces, function( current_piece_field_information ) { #>
+      <# current_piece_field_information.default = ( typeof _current_value.token_map[ current_piece_field_information.name ] !== 'undefined' ? _current_value.token_map[ current_piece_field_information.name ] : null ); #>
+      <# var args = { field_information : current_piece_field_information,
+                      field_input_name : data.field_input_name + "[token_map][" + current_piece_field_information.name + "]",
+                      _has_label : 1 };
+      #>
+      <li data-payment-page-scope="field_{{ current_piece_field_information.type }}"
+          data-payment-page-field-key="{{ current_piece_field_information.name }}">
+        <label>{{ current_piece_field_information.label }}</label>
+        {{{ PaymentPage.Template.get( "form", "template/field.html", args ) }}}
+      </li>
+      <# }) #>
+    </ul>
+    <textarea name="{{ data.field_input_name + '[token_order]' }}">{{ ( _current_value.token_order instanceof Array ? _current_value.token_order.join(',') : _current_value.token_order ) }}</textarea>
+    <p>Drag to reorder</p>
+    <ul data-payment-page-scope="field_order"></ul>
+  <# } else if( data.field_information.type === "textarea" ) { #>
+    <textarea name="{{ data.field_input_name }}">{{{ _current_value !== null ? _current_value : '' }}}</textarea>
+  <# } else if( data.field_information.type === "editor" ) { #>
+    <div data-payment-page-scope="editor_wrapper">
+        <textarea name="{{ data.field_input_name }}"
+                  data-payment-page-library="wpeditor">{{{ _current_value !== null ? _current_value : '' }}}</textarea>
+    </div>
+  <# } else if( data.field_information.type === "multiple_select" ) { #>
+    <#
+      let _selected = ( _current_value !== null && _current_value instanceof Array ? _current_value : [] );
+    #>
+    <select name="{{ data.field_input_name }}[]"
+            multiple="multiple"
+            <# if( typeof data.field_information.attributes !== "undefined" ) { #>
+              <# _.each( data.field_information.attributes, function( attribute_value, attribute_name ) { #>
+                {{ attribute_name }}="{{ typeof attribute_value === "object" ? _.escape(JSON.stringify( attribute_value )) : attribute_value }}"
+              <# }) #>
+            <# } #>>
+      <# _.each( data.field_information.options, function( option_label, option_key ) { #>
+        <option value="{{ option_key }}" {{{ payment_page_in_array( option_key, _selected ) ? 'selected="selected"' : '' }}}>{{ option_label }}</option>
+      <# }) #>
+    </select>
+  <# } else if( data.field_information.type === "select" ) { #>
+    <select name="{{ data.field_input_name }}"
+            <# if( typeof data.field_information.attributes !== "undefined" ) { #>
+              <# _.each( data.field_information.attributes, function( attribute_value, attribute_name ) { #>
+                {{ attribute_name }}="{{{ ( typeof attribute_value === "object" ? _.escape( JSON.stringify( attribute_value ) ) : _.escape( attribute_value ) ) }}}"
+              <# }) #>
+            <# } #>
+    >
+      <# _.each( data.field_information.options, function( option_label, option_key ) { #>
+        <# if( typeof option_label === "object" ) { #>
+          <option value="{{ option_key }}" {{{ _current_value === "" + option_key ? 'selected="selected"' : '' }}}
+                  <# if( typeof option_label.attributes !== "undefined" ) { #>
+                    <# _.each( option_label.attributes, function( attribute_value, attribute_name ) { #>
+                      {{ attribute_name }}="{{ typeof attribute_value === "object" ? _.escape(JSON.stringify( attribute_value )) : attribute_value }}"
+                    <# }) #>
+                  <# } #>
+          >
+            {{ option_label.label }}
+          </option>
+        <# } else { #>
+          <option value="{{ option_key }}" {{{ _current_value === "" + option_key ? 'selected="selected"' : '' }}}>{{ option_label }}</option>
+        <# } #>
+      <# }) #>
+    </select>
+  <# } else if( data.field_information.type === "attachment_image" ) { #>
+    <div data-payment-page-library="wpmedia">
+      <input type="text" name="{{ data.field_input_name }}" value="{{ _current_value !== null ? _current_value : '' }}"/>
+    </div>
+  <# } else if( data.field_information.type === "post_id" || data.field_information.type === "post_ids" ) { #>
+    <select name="{{ data.field_input_name }}"
+            placeholder="{{ PaymentPage.lang.select_default_post_placeholder }}"
+            {{{ data.field_information.type === "post_ids" ? 'multiple="multiple"' : '' }}}
+            <# if( _current_value !== null ) { #>
+            data-value="{{ _current_value instanceof Array ? _current_value.join( "," ) : _current_value }}"
+            <# } else { #>
+            data-value=""
+            <# } #>
+            data-payment-page-library="select2"
+            data-payment-page-library-args="{{{ _.escape( JSON.stringify( { "mode" : "post_id", "post_type" : data.field_information.post_type } ) ) }}}"></select>
+  <# } else if( data.field_information.type === "form_fields_map" ) { #>
+    <div data-payment-page-component-form-section="fields_map_form_wrapper"
+         data-repeater-field-name="{{ data.field_information.name }}">
+      <textarea style="display:none !important;" name="{{ data.field_input_name }}">{{{ _current_value !== null ? JSON.stringify(_current_value) : '{}' }}}</textarea>
+      <div data-payment-page-component-form-section="fields_map_form_container">
+
+      </div>
+      <div data-payment-page-component-form-section="fields_map_form_footer">
+        <span data-payment-page-component-form-trigger="fields_map_form_add"
+              data-payment-page-button="secondary">Add Custom Field</span>
+      </div>
+    </div>
+  <# } else if( data.field_information.type === "repeater" ) { #>
+    <# var _layout = ( typeof data.field_information.layout !== 'undefined' ? data.field_information.layout : 'default' ); #>
+    <# var allow_add = ( typeof data.field_information.allow_add !== 'undefined' ? data.field_information.allow_add : 1 ); #>
+    <# var allow_delete = ( typeof data.field_information.allow_delete !== 'undefined' ? data.field_information.allow_delete : 1 ); #>
+
+    <div data-payment-page-component-form-section="repeater_form_wrapper"
+         data-payment-page-layout="{{ _layout }}"
+         data-repeater-field-name="{{ data.field_information.name }}"
+         data-repeater-field-input-name="{{ data.field_input_name }}">
+      <# if( _layout === "basic" ) { #>
+        <div data-payment-page-component-form-section="repeater_form_item_container">
+          <# if( _current_value !== null && ( Array.isArray( _current_value ) || ( typeof _current_value === "object" && _current_value !== null && Object.keys( _current_value ).length > 0 ) ) ) { #>
+            <# var i = 1; #>
+            <# _.each( _current_value, function( repeater_value, repeater_index ) { #>
+              <# var field_namespace = data.field_input_name + '[' + ( typeof repeater_value.__repeater_index !== 'undefined' ? repeater_value.__repeater_index : repeater_index ) + ']';
+                 var fields_parsed = payment_page_form_field_repeater_parse_value(data.field_information.fields, repeater_value); #>
+              <div data-payment-page-component-form-section="repeater_form_item" data-field-namespace="{{ field_namespace }}">
+                <div data-payment-page-component-form-section="repeater_form_item_content">
+                  {{{ PaymentPage.Template.get( 'form', 'template/default', { fields : fields_parsed, field_namespace : field_namespace } ) }}}
+                </div>
+                <div data-payment-page-component-form-section="repeater_form_item_footer">
+                  <button type="button" data-payment-page-button="danger" data-payment-page-component-form-trigger="remove">{{ PaymentPage.lang.delete }}</button>
+                </div>
+              </div>
+              <# i++ #>
+            <# }) #>
+          <# } #>
+        </div>
+      <# } else { #>
+        <div data-payment-page-component-form-section="repeater_form_item_container">
+          <# if( _current_value !== null && ( Array.isArray( _current_value ) || ( typeof _current_value === "object" && _current_value !== null && Object.keys( _current_value ).length > 0 ) ) ) { #>
+            <# var i = 1; #>
+            <# _.each( _current_value, function( repeater_value, repeater_index ) { #>
+              <# var field_namespace = data.field_input_name + '[' + ( typeof repeater_value.__repeater_index !== 'undefined' ? repeater_value.__repeater_index : repeater_index ) + ']';
+                 var fields_parsed = payment_page_form_field_repeater_parse_value(data.field_information.fields, repeater_value);
+                 var _has_admin_label = false;
+              #>
+              <div data-payment-page-component-form-section="repeater_form_item"
+                   data-payment-page-interaction-state="none"
+                   data-field-namespace="{{ field_namespace }}">
+                <div data-payment-page-component-form-section="repeater_form_item_header">
+                  <h4>
+                    <span data-payment-page-component-form-trigger="order">{{{ PaymentPage.settings.svg_icon_map.element_order }}}</span>
+                    <# _.each( fields_parsed, function( parsed_field_information ) { #>
+                      <# if( typeof parsed_field_information.admin_label !== 'undefined' && parsed_field_information.admin_label ) { #>
+                        <strong data-label-key="{{ parsed_field_information.name }}">{{ parsed_field_information.value }}</strong>
+                        <# _has_admin_label = true; #>
+                      <# } #>
+                    <# }) #>
+                    <# if( !_has_admin_label ) { #>
+                    <span>Item #{{ i }}</span>
+                    <# } #>
+                    <i>{{{ PaymentPage.settings.svg_icon_map.angle_down }}}</i>
+                  </h4>
+                  <button type="button" data-payment-page-button="danger" data-payment-page-component-form-trigger="remove">{{ PaymentPage.lang.delete }}</button>
+                </div>
+                <div data-payment-page-component-form-section="repeater_form_item_content">
+                  {{{ PaymentPage.Template.get( 'form', 'template/default', { fields : fields_parsed, field_namespace : field_namespace } ) }}}
+                </div>
+              </div>
+              <# i++ #>
+            <# }) #>
+          <# } #>
+        </div>
+      <# } #>
+
+      <# if( allow_add ) { #>
+      <footer>
+        <span data-payment-page-component-form-trigger="add_repeater" data-payment-page-button="primary">{{ typeof data.field_information.label_add !== 'undefined' ? data.field_information.label_add : PaymentPage.lang.add }}</span>
+      </footer>
+      <# } #>
+    </div>
+  <# } else { #>
+    <p data-payment-page-notification="danger">This field type is not currently integrated : <strong>{{ data.field_information.type }}</strong></p>
+  <# } #>
+</div>

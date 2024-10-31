@@ -1,0 +1,48 @@
+<# if( typeof data.field_nonce !== "undefined" && data.field_nonce !== "" ) { #>
+  <input type="hidden" name="{{ data.field_nonce }}" value="{{ data.field_nonce_value }}">
+<# } #>
+
+<# _.each( data.fields, function( field_information ) { #>
+  <# let field_input_name = ( data.field_namespace === '' ? field_information.name : data.field_namespace + '[' + field_information.name + ']' ); #>
+  <# let _has_label = false; #>
+  <# if( field_information.type === "repeater_order" ) { #>
+    <input type="hidden" name="{{ field_input_name }}" value="{{ field_information.value }}" data-payment-page-scope="repeater_order"/>
+  <# } else if( field_information.type === "hidden" ) { #>
+    <input type="hidden" name="{{ field_input_name }}" value="{{ field_information.value }}" data-payment-page-scope="repeater_order"/>
+  <# } else if( field_information.type === "header" ) { #>
+    <div data-payment-page-component-form-section="header"
+         data-payment-page-separator="{{ typeof field_information.separator !== 'undefined' ? field_information.separator : 'none' }}">
+      <# if( typeof field_information.label !== 'undefined' && field_information.label !== '' ) { #>
+        <h3>{{ field_information.label }}</h3>
+      <# } else if( typeof field_information.title !== 'undefined' && field_information.title !== '' ) { #>
+        <h3>{{ field_information.title }}</h3>
+      <# } #>
+    </div>
+  <# } else { #>
+    <div data-payment-page-component-form-section="field_wrapper_{{ field_information.type }}"
+         <# if( typeof field_information.row_attributes !== 'undefined' ) { #>
+           <# _.each( field_information.row_attributes, function( _value, _key ) { #>
+              {{ _key }}="{{ _value }}"
+           <# }) #>
+         <# } #>
+    >
+      <# if( typeof field_information.label !== 'undefined' && field_information.label !== null && field_information.label !== '' ) { #>
+        <label data-payment-page-scope="{{ typeof field_information.admin_label !== 'undefined' && field_information.admin_label ? 'admin_label' : 'default' }}">
+          {{{ field_information.label }}}
+        </label>
+        <# _has_label = true; #>
+      <# } else if( typeof field_information.title !== 'undefined' && field_information.title !== null && field_information.title !== '' ) { #>
+        <label data-payment-page-scope="{{ typeof field_information.admin_label !== 'undefined' && field_information.admin_label ? 'admin_label' : 'default' }}">
+          {{ field_information.title }}
+        </label>
+        <# _has_label = true; #>
+      <# } #>
+
+      {{{ PaymentPage.Template.get( "form", "template/field.html", { field_information : field_information, field_input_name : field_input_name, _has_label : _has_label } ) }}}
+
+      <# if( typeof field_information.description !== 'undefined' ) { #>
+        <div data-payment-page-component-form-section="description">{{{ field_information.description }}}</div>
+      <# } #>
+    </div>
+  <# } #>
+<# }) #>

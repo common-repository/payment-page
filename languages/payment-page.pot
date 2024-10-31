@@ -1,0 +1,1832 @@
+# Copyright (C) 2024 Gaucho Plugins
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Payment Page 1.3.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/payment-page\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-02T11:48:28+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: payment-page\n"
+
+#. Plugin Name of the plugin
+#: app/ThirdPartyIntegration/Elementor.php:61
+msgid "Payment Page"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://payment.page"
+msgstr ""
+
+#. Description of the plugin
+msgid "Payment Page is the most powerful way to accept online payments. Connect your payment gateway, choose a template, and get paid!"
+msgstr ""
+
+#. Author of the plugin
+msgid "Gaucho Plugins"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://gauchoplugins.com/"
+msgstr ""
+
+#: app/API/Features.php:55
+msgid "First Name"
+msgstr ""
+
+#: app/API/Features.php:56
+msgid "Last Name"
+msgstr ""
+
+#: app/API/Features.php:57
+#: app/PaymentGateway/PayPal.php:31
+msgid "Email Address"
+msgstr ""
+
+#: app/Controller.php:99
+msgid "Payment Page %s Mode"
+msgstr ""
+
+#: app/Migration.php:216
+msgid "Migration currently marked in progress, it started %s seconds ago."
+msgstr ""
+
+#: app/Migration.php:217
+#: app/Migration.php:245
+#: app/Migration/Admin.php:189
+msgid "Retry"
+msgstr ""
+
+#: app/Migration.php:221
+msgid "This version has already been installed, skipping"
+msgstr ""
+
+#: app/Migration.php:244
+msgid "File not found %s."
+msgstr ""
+
+#: app/Migration/Admin.php:42
+msgid "%s Migration"
+msgstr ""
+
+#: app/Migration/Admin.php:43
+msgid "Migration"
+msgstr ""
+
+#: app/Migration/Admin.php:52
+msgid "%s Migration"
+msgstr ""
+
+#: app/Migration/Admin.php:55
+msgid "You're about to upgrade to %1$s version %2$s this version brings in database upgrades."
+msgstr ""
+
+#: app/Migration/Admin.php:56
+msgid "Please do not close this screen after pressing continue, until the update is completed."
+msgstr ""
+
+#: app/Migration/Admin.php:57
+msgid "Continue"
+msgstr ""
+
+#: app/Migration/Admin.php:165
+msgid "%s Database Upgrade"
+msgstr ""
+
+#: app/Migration/Admin.php:167
+msgid "Click here to continue"
+msgstr ""
+
+#: app/Migration/Admin.php:178
+msgid "Database successfully updated. Continue to: "
+msgstr ""
+
+#: app/Migration/Admin.php:180
+msgid "Manage Settings"
+msgstr ""
+
+#: app/Migration/Admin.php:188
+msgid "Could not determine the migration version."
+msgstr ""
+
+#: app/Migration/Admin.php:196
+msgid "Processing File: %s"
+msgstr ""
+
+#: app/Migration/Admin.php:200
+msgid "Retry Attempt : %1$s; Current Version: %2$s"
+msgstr ""
+
+#: app/Migration/Admin.php:210
+msgid "Skipped Migration file for version: %s, check your Platform Health Report for possible issues."
+msgstr ""
+
+#: app/Model/Skeleton.php:48
+msgid "Failed to find %s."
+msgstr ""
+
+#: app/Model/Skeleton.php:258
+msgid "Failed to insert %1$s - %2$s."
+msgstr ""
+
+#: app/Model/Skeleton.php:332
+msgid "Failed to update %1$s for id %2$s."
+msgstr ""
+
+#: app/PaymentForm.php:118
+msgid "Valid Email Address required"
+msgstr ""
+
+#: app/PaymentForm.php:125
+#: templates/shortcode-payment-success.php:13
+msgid "Item"
+msgstr ""
+
+#: app/PaymentForm.php:126
+#: templates/shortcode-payment-success.php:17
+msgid "Customer Name"
+msgstr ""
+
+#: app/PaymentForm.php:127
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:143
+#: templates/shortcode-payment-success.php:21
+msgid "Email"
+msgstr ""
+
+#: app/PaymentForm.php:128
+#: templates/shortcode-payment-success.php:25
+msgid "Payment Date"
+msgstr ""
+
+#: app/PaymentForm.php:129
+#: templates/shortcode-payment-success.php:29
+msgid "Payment Amount"
+msgstr ""
+
+#: app/PaymentForm.php:130
+msgid "Payment Failed"
+msgstr ""
+
+#: app/PaymentForm.php:131
+msgid "If the button does not appear, there's no cards detected by the payment wallet."
+msgstr ""
+
+#: app/PaymentForm.php:132
+msgid "This Wallet is not compatible with your browser."
+msgstr ""
+
+#: app/PaymentForm.php:133
+msgid "Only supports one-time payments"
+msgstr ""
+
+#: app/PaymentForm.php:142
+#: app/PaymentForm.php:147
+msgid "No payment gateway connected."
+msgstr ""
+
+#: app/PaymentForm.php:144
+msgid "Connect a payment gateway >"
+msgstr ""
+
+#: app/PaymentForm.php:164
+msgid "When in TEST mode, use %s 4242 4242 4242 4242 with any exp date and CVV."
+msgstr ""
+
+#: app/PaymentForm.php:165
+msgid "Stripe card testing details >"
+msgstr ""
+
+#: app/PaymentGateway.php:14
+#: app/PaymentGateway/Stripe.php:169
+msgid "Stripe"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:14
+msgid "Create a %1$s app, which can be done in %2$s in the PayPal account area. Then, enter the credentials below."
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:16
+msgid "My Apps & Credentials"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:21
+msgid "To configure PayPal, please read our %s."
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:22
+#: app/PaymentGateway/PayPal.php:226
+#: app/PaymentGateway/PayPal.php:242
+#: app/PaymentGateway/Stripe.php:560
+#: app/PaymentGateway/Stripe.php:576
+msgid "Documentation"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:39
+#: app/PaymentGateway/Stripe.php:338
+#: app/PaymentGateway/Stripe.php:359
+msgid "Client ID"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:47
+#: app/PaymentGateway/Stripe.php:345
+#: app/PaymentGateway/Stripe.php:379
+msgid "Secret"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:57
+#: app/RestAPI/Administration.php:128
+#: app/RestAPI/Administration.php:132
+msgid "Save Settings"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:169
+msgid "PayPal"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:177
+msgid "PayPal is one of the most global-reaching payment gateways to accept one-time payments, with multiple payment methods and currencies."
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:189
+#: app/PaymentGateway/PayPal.php:193
+msgid "Standard Checkout"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:196
+msgid "Set up standard payments on your checkout page so your buyers can pay with PayPal, debit and credit cards. "
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:209
+msgid "Standard PayPal Checkout"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:221
+#: app/PaymentGateway/PayPal.php:236
+msgid "Create an Endpoint in the %1$s, to send the event: %2$s"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:222
+#: app/PaymentGateway/PayPal.php:237
+msgid "PayPal My Apps & Credentials"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:225
+#: app/PaymentGateway/PayPal.php:241
+#: app/PaymentGateway/Stripe.php:559
+#: app/PaymentGateway/Stripe.php:575
+msgid "Our %s covers how to configure Webhooks properly."
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:231
+#: app/PaymentGateway/Stripe.php:565
+msgid "Webhook Settings (Recommended)"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:232
+#: app/PaymentGateway/Stripe.php:566
+msgid "Webhook Settings"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:246
+#: app/PaymentGateway/PayPal.php:265
+#: app/PaymentGateway/Stripe.php:580
+#: app/PaymentGateway/Stripe.php:599
+msgid "Webhook URL"
+msgstr ""
+
+#: app/PaymentGateway/PayPal.php:253
+#: app/PaymentGateway/PayPal.php:272
+msgid "Webhook ID"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:26
+msgid "Could not determine the connection URL, please try again later."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:177
+msgid "Stripe is one of the best payment gateways to accept one-time and recurring payments, with multiple payment methods and currencies."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:180
+msgid "Note: The free version of Payment Page charges a small 2% fee on Stripe transactions in order to help us continue providing great features to the community."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:182
+msgid "To remove the fee and get access to ACH payments via Plaid, please %s"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:240
+#: app/PaymentGateway/Stripe.php:401
+#: app/PaymentGateway/Stripe.php:503
+msgid "Apple Pay"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:243
+msgid "Apple Pay enables frictionless card payments and eliminates the need to manually type card or shipping details."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:289
+msgid "Apple Domain Verified for %s"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:299
+msgid "Manage in Stripe"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:303
+#: app/PaymentGateway/Stripe.php:308
+msgid "Credit Cards"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:315
+msgid "Accept Visa, Mastercard, American Express, Discover, Diners Club, and JCB payments from customers worldwide."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:318
+#: app/PaymentGateway/Stripe.php:324
+#: app/PaymentGateway/Stripe.php:477
+msgid "ACH Direct Debit"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:319
+msgid "ACH payments with the Stripe + Plaid integration"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:327
+msgid "Plaid provides the quickest way to collect and verify your customer’s banking information. Using the Stripe + Plaid integration, you can instantly receive a verified bank account, which allows for immediate charging."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:330
+msgid "Plaid Settings %s"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:333
+msgid "Enter your Client ID and Secret Sandbox key from the %s"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:334
+#: app/PaymentGateway/Stripe.php:355
+msgid "Plaid Dashboard"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:354
+msgid "Enter your Client ID and Development or Production key from the %s"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:366
+msgid "Environment"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:372
+msgid "%s - Build out your app with up to 100 live credentials"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:373
+msgid "%s - Launch your app with unlimited live credentials"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:390
+#: app/PaymentGateway/Stripe.php:395
+#: app/PaymentGateway/Stripe.php:491
+msgid "SEPA Direct Debit"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:398
+msgid "SEPA Direct Debit enables customers in the Single Euro Payments Area (SEPA) to pay by providing their bank account details. Customers must accept a mandate authorising you to debit their account."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:409
+#: app/PaymentGateway/Stripe.php:415
+#: app/PaymentGateway/Stripe.php:513
+msgid "Google Pay"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:418
+msgid "Google Pay allows customers to make payments in your app or website using any credit or debit card saved to their Google Account, including those from Google Play, YouTube, Chrome, or an Android device."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:421
+#: app/PaymentGateway/Stripe.php:427
+#: app/PaymentGateway/Stripe.php:523
+msgid "Microsoft Pay"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:430
+msgid "Microsoft Pay (previously Microsoft Wallet) is a mobile payment and digital wallet service by Microsoft that lets users make payments and store loyalty cards on certain devices. Making payments is currently supported on the Microsoft Edge browser."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:433
+#: app/PaymentGateway/Stripe.php:438
+#: app/PaymentGateway/Stripe.php:533
+msgid "Alipay"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:441
+msgid "Alipay enables Chinese consumers to pay directly via online transfer from their bank account. Customers are redirected to Alipay's payment page to log in and approve payments."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:444
+#: app/PaymentGateway/Stripe.php:449
+#: app/PaymentGateway/Stripe.php:543
+msgid "WeChat Pay"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:452
+msgid "WeChat Pay enables Chinese consumers to pay directly via online transfer from their account. Customers are given a QR Code to scan using their WeChat mobile application to approve payments."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:465
+#: app/RestAPI/Webhook.php:370
+msgid "Credit Card"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:487
+msgid "By providing your payment information and confirming this payment, you authorise (A) %s and Stripe, our payment service provider and/or PPRO, its local service provider, to send instructions to your bank to debit your account and (B) your bank to debit your account in accordance with those instructions. As part of your rights, you are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited. Your rights are explained in a statement that you can obtain from your bank. You agree to receive notifications for future debits up to 2 days before they occur."
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:555
+msgid "Create a webhook in the %1$s, events to send : %2$s"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:556
+#: app/PaymentGateway/Stripe.php:571
+msgid "Stripe Webhooks Settings"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:570
+msgid "Create an Endpoint in the %1$s, to send the events : %2$s"
+msgstr ""
+
+#: app/PaymentGateway/Stripe.php:587
+#: app/PaymentGateway/Stripe.php:606
+msgid "Webhook Signing Secret"
+msgstr ""
+
+#: app/PostTypes/Form.php:22
+#: app/PostTypes/Form.php:26
+msgid "Payment Form"
+msgstr ""
+
+#: app/PostTypes/Form.php:23
+msgid "Payment Forms can be embed anywhere via shortcode."
+msgstr ""
+
+#: app/PostTypes/Form.php:25
+msgctxt "Post Type General Name"
+msgid "Payment Forms"
+msgstr ""
+
+#: app/PostTypes/Form.php:27
+#: app/PostTypes/Form.php:28
+#: app/PostTypes/Form.php:32
+#: app/RestAPI/Administration.php:190
+#: templates/admin/header.php:9
+msgid "Payment Forms"
+msgstr ""
+
+#: app/PostTypes/Form.php:29
+msgid "Payment Form Archives"
+msgstr ""
+
+#: app/PostTypes/Form.php:30
+msgid "Payment Form Attributes"
+msgstr ""
+
+#: app/PostTypes/Form.php:31
+msgid "Parent Payment Form"
+msgstr ""
+
+#: app/PostTypes/Form.php:33
+msgid "Add New Payment Form"
+msgstr ""
+
+#: app/PostTypes/Form.php:34
+msgid "Add New"
+msgstr ""
+
+#: app/PostTypes/Form.php:35
+msgid "New Payment Form"
+msgstr ""
+
+#: app/PostTypes/Form.php:36
+msgid "Edit Payment Form"
+msgstr ""
+
+#: app/PostTypes/Form.php:37
+msgid "Update Payment Form"
+msgstr ""
+
+#: app/PostTypes/Form.php:38
+msgid "View Payment Form"
+msgstr ""
+
+#: app/PostTypes/Form.php:39
+msgid "View Payment Forms"
+msgstr ""
+
+#: app/PostTypes/Form.php:40
+msgid "Search Payment Forms"
+msgstr ""
+
+#: app/PostTypes/Form.php:41
+msgid "Not found"
+msgstr ""
+
+#: app/PostTypes/Form.php:42
+msgid "Not found in Trash"
+msgstr ""
+
+#: app/PostTypes/Form.php:43
+msgid "Featured Image"
+msgstr ""
+
+#: app/PostTypes/Form.php:44
+msgid "Set featured image"
+msgstr ""
+
+#: app/PostTypes/Form.php:45
+msgid "Remove featured image"
+msgstr ""
+
+#: app/PostTypes/Form.php:46
+msgid "Use as featured image"
+msgstr ""
+
+#: app/PostTypes/Form.php:47
+msgid "Insert into item"
+msgstr ""
+
+#: app/PostTypes/Form.php:48
+msgid "Uploaded to this item"
+msgstr ""
+
+#: app/PostTypes/Form.php:49
+msgid "Payment Form Item List"
+msgstr ""
+
+#: app/PostTypes/Form.php:50
+msgid "Payment Form Item List Navigation"
+msgstr ""
+
+#: app/PostTypes/Form.php:51
+msgid "Filter items list"
+msgstr ""
+
+#: app/PostTypes/Form.php:162
+msgid "Shortcode"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:24
+msgid "Actions After Submit"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:29
+msgid "Add Action"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:34
+msgid "Add actions that will be performed after a visitor submits the form (e.g. send an email notification). Choosing an action will add its setting below."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:48
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:52
+#: app/_functions/general.php:187
+msgid "HTTP Request"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:53
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:63
+msgid "HTTP Request URL"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:56
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:65
+msgid "Type your http request URL here"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:57
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:66
+msgid "Send a HTTP Request on successful payments to the following URL"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:72
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:85
+msgid "Payment Success Title"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:83
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:96
+msgid "Payment Success Message"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:94
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:107
+msgid "Payment Success Detail Label"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:105
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:118
+msgid "Payment Success Detail Value"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:116
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:130
+msgid "Payment Failure Message"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:128
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:214
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:77
+#: app/_functions/general.php:186
+msgid "Dynamic Message"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:139
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:166
+msgid "New Payment from \"%s\""
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:140
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:167
+msgid "Payment Details from \"%s\""
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:148
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:156
+msgid "To"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:153
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:161
+msgid "Separate emails with commas"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:156
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:172
+msgid "Subject Admin"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:163
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:184
+msgid "Subject Payer"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:170
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:196
+msgid "From email"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:178
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:206
+msgid "From name"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:194
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:220
+msgid "Redirect"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:199
+msgid "Redirect to URL after Successful Payment"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:203
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:232
+msgid "Type your redirect URL here"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:219
+msgid "Payment Success Message:"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:225
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:231
+msgid "Payment Details Title:"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:235
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:35
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:65
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:81
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:95
+#: app/PostTypes/Form/FieldMap/SubscriptionSelector.php:15
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:276
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:37
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:68
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:83
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:96
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubscriptionSelector.php:27
+#: app/_functions/elementor.php:241
+msgid "On"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:236
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:36
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:66
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:82
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:96
+#: app/PostTypes/Form/FieldMap/SubscriptionSelector.php:16
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:277
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:38
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:69
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:84
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:97
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubscriptionSelector.php:28
+#: app/_functions/elementor.php:242
+msgid "Off"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/ActionsForm.php:241
+msgid "Payment Failure Message:"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:31
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:35
+msgid "Currency Filter"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:42
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:46
+msgid "Currency Symbol"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:46
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:48
+msgid "Symbol"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:47
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:49
+msgid "Text"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:53
+msgid "Currency Options"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:80
+msgid "Button Background Color (Active)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:87
+msgid "Button Background Color (Inactive)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:94
+msgid "Active Text color"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:101
+msgid "Inactive Text color"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:108
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:126
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:104
+#: app/_functions/elementor.php:274
+msgid "Padding"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:115
+msgid "Selector Border"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:133
+msgid "Active border"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:144
+msgid "Inactive border"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:157
+msgid "Background color"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:164
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:321
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:105
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:202
+msgid "Arrow Color"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:188
+#: app/PostTypes/Form/FieldMap/Form.php:179
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:278
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:131
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:125
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:214
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:174
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubmitButtonControl.php:88
+msgid "Border"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:209
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:59
+msgid "Filter - Switcher"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/CurrencySelector.php:215
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/CurrencySelector.php:99
+msgid "Filter - Dropdown"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:24
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:33
+msgid "Custom fields are stored at your payment gateway in the relevant transaction details. E.g. - You might want to collect an invoice ID when a customer is entering a unique Custom Amount for an invoice."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:28
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:37
+msgid "PayPal does not support storing Custom Fields."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:32
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:17
+msgid "Form Fields"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:37
+#: app/PostTypes/Form/FieldMap/Form.php:60
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:25
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:121
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:95
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:231
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:24
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:62
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:27
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:127
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:25
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:101
+msgid "Section Title"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:40
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:26
+msgid "PAYMENT METHOD"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:41
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:30
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:99
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:27
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:30
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:28
+msgid "Type your section title"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:83
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:145
+msgid "Field Labels (Inactive)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:107
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:158
+msgid "Field Labels (Active)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:131
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:180
+msgid "Input Text"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:155
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:201
+msgid "Placeholder Text"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:201
+#: app/PostTypes/Form/FieldMap/Form.php:207
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:314
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:80
+#: app/_functions/elementor.php:207
+#: app/_functions/elementor.php:223
+msgid "Background"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Form.php:214
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:53
+msgid "Form"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/GlobalOptions.php:10
+msgid "Container Settings"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/GlobalOptions.php:15
+msgid "Max Width"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/GlobalOptions.php:22
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:118
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubmitButtonControl.php:67
+msgid "Spacing Top"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/GlobalOptions.php:29
+msgid "Spacing Bottom"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/GlobalOptions.php:38
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/GlobalOptions.php:15
+msgid "Global Options"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/GlobalOptions.php:43
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/GlobalOptions.php:23
+msgid "Section Titles"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/GlobalOptions.php:47
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/GlobalOptions.php:33
+#: app/_functions/elementor.php:255
+msgid "Spacing"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentFormDisplay.php:10
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentFormDisplay.php:11
+msgid "Payment Form Display"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentFormDisplay.php:15
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentFormDisplay.php:26
+msgid "Select One:"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentFormDisplay.php:20
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentFormDisplay.php:30
+msgid "Inline/embed payment form"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentFormDisplay.php:21
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentFormDisplay.php:31
+msgid "Payment buttons (popup form)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:29
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:29
+msgid "Payment Method"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:47
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:52
+msgid "Connect %s >"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:104
+#: app/RestAPI/Administration.php:125
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:20
+msgid "Payment Methods"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:117
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:118
+msgid "Payment Methods are displayed as Tabs (on the embedded payment form) or Buttons (to open the popup form). Their styling options are exactly the same, so you can easily decide which approach you want to take on this payment form."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:144
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:209
+msgid "Per Row"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:157
+msgid "Vertical Spacing"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:168
+msgid "Item Height"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:179
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:263
+msgid "Padding (Inactive)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:193
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:274
+msgid "Padding (Active)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:207
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:284
+msgid "Border (Inactive)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:234
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:313
+msgid "Border (Active)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PaymentGateways.php:261
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:109
+msgid "Payment Method Tabs/Buttons"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:20
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:155
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:28
+msgid "Price"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:24
+#: app/ThirdPartyIntegration/Elementor/Controls/PricingControl.php:83
+msgid "If left empty, the customer will be able to enter any amount."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:40
+msgid "Different first payment amount."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:59
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:182
+msgid "First Payment Amount"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:66
+msgid "This option will not be used for one-time payments"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:70
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:160
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:38
+msgid "Currency"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:78
+msgid "Subscription frequency:"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:98
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:27
+msgid "CHOOSE YOUR PLAN"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:103
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:55
+msgid "Plans List"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:109
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:60
+msgid "Your first plan"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:118
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:63
+msgid "Your second plan"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:129
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:37
+msgid "Title"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:132
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:133
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:39
+msgid "Plan Title"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:141
+msgid "Duplicate Pricing Configuration."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:143
+msgid "Add Price Option"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:150
+msgid "Plan name"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:176
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:33
+msgid "Frequency"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:192
+msgid "Custom Text"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:198
+msgid "Custom Text 2"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:204
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:73
+msgid "Select Fields To Display:"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:212
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:255
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:81
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:138
+msgid "Custom Amount Title"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:215
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:83
+msgid "ENTER YOUR AMOUNT"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:216
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:84
+msgid "Type your custom amount title"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:220
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:365
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:17
+msgid "Pricing Plans"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:308
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:196
+msgid "Pricing Plans Dropdown"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:345
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:222
+msgid "Pricing Plans Dropdown List"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:351
+msgid "Background Color (Inactive)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/PricingPlans.php:358
+msgid "Background Color (Active)"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:18
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:75
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:155
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubmitButtonControl.php:15
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubmitButtonControl.php:32
+msgid "Submit Button"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:43
+msgid "Enter Custom Text 1"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:48
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:53
+msgid "Enter Custom Text 2"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/SubmitButtonControl.php:61
+msgid "Pay"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/SubscriptionSelector.php:11
+#: app/PostTypes/Form/FieldMap/SubscriptionSelector.php:23
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubscriptionSelector.php:25
+msgid "Subscription Filter"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Upgrade.php:14
+msgid "Upgrade to PRO to remove the 2% transaction fee."
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Upgrade.php:15
+msgid "Upgrade Now"
+msgstr ""
+
+#: app/PostTypes/Form/FieldMap/Upgrade.php:19
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:18
+msgid "Upgrade Options"
+msgstr ""
+
+#: app/RestAPI/Administration.php:109
+msgid "Upgrade >"
+msgstr ""
+
+#: app/RestAPI/Administration.php:110
+msgid "To accept %s, please %s"
+msgstr ""
+
+#: app/RestAPI/Administration.php:111
+msgid "To accept recurring payments with %s, please %s"
+msgstr ""
+
+#: app/RestAPI/Administration.php:113
+#: templates/admin/header.php:14
+msgid "Payment Gateways"
+msgstr ""
+
+#: app/RestAPI/Administration.php:114
+msgid "Templates"
+msgstr ""
+
+#: app/RestAPI/Administration.php:116
+msgid "Configure"
+msgstr ""
+
+#: app/RestAPI/Administration.php:117
+msgid "Configured"
+msgstr ""
+
+#: app/RestAPI/Administration.php:118
+msgid "%s Connection Settings"
+msgstr ""
+
+#: app/RestAPI/Administration.php:120
+msgid "Connect with %s"
+msgstr ""
+
+#: app/RestAPI/Administration.php:122
+msgid "Test"
+msgstr ""
+
+#: app/RestAPI/Administration.php:123
+msgid "Live"
+msgstr ""
+
+#: app/RestAPI/Administration.php:126
+msgid "Status"
+msgstr ""
+
+#: app/RestAPI/Administration.php:127
+msgid "This payment method requires a HTTPS connection for both live & testing"
+msgstr ""
+
+#: app/RestAPI/Administration.php:130
+msgid "Expand"
+msgstr ""
+
+#: app/RestAPI/Administration.php:131
+msgid "Hide"
+msgstr ""
+
+#: app/RestAPI/Administration.php:134
+msgid "More Coming Soon!"
+msgstr ""
+
+#: app/RestAPI/Administration.php:135
+msgid "Requires Elementor"
+msgstr ""
+
+#: app/RestAPI/Administration.php:136
+msgid "Install Elementor Now"
+msgstr ""
+
+#: app/RestAPI/Administration.php:137
+msgid "Activate Elementor Now"
+msgstr ""
+
+#: app/RestAPI/Administration.php:138
+msgid "Import >"
+msgstr ""
+
+#: app/RestAPI/Administration.php:139
+msgid "Preview >"
+msgstr ""
+
+#: app/RestAPI/Administration.php:141
+msgid "< %s"
+msgstr ""
+
+#: app/RestAPI/Administration.php:142
+msgid "Next, %s >"
+msgstr ""
+
+#: app/RestAPI/Administration.php:143
+msgid "Skip to %s >"
+msgstr ""
+
+#: app/RestAPI/Administration.php:144
+msgid "Exit Quick Setup >"
+msgstr ""
+
+#: app/RestAPI/Administration.php:145
+msgid "Start Quick Setup >"
+msgstr ""
+
+#: app/RestAPI/Administration.php:147
+msgid "Your website URL contains invalid character(s): %1$s which will cause problems with the %2$s connection."
+msgstr ""
+
+#: app/RestAPI/Administration.php:148
+msgid "Your SSL security certificate is not properly configured on your site. Please configure SSL in order to connect %s. Your hosting provider can help with this."
+msgstr ""
+
+#: app/RestAPI/Administration.php:157
+msgid "Connect your Payment Gateway"
+msgstr ""
+
+#: app/RestAPI/Administration.php:158
+msgid "Welcome to Payment Page"
+msgstr ""
+
+#: app/RestAPI/Administration.php:159
+#: app/RestAPI/Administration.php:166
+#: app/RestAPI/Administration.php:174
+msgid "Manage Gateways"
+msgstr ""
+
+#: app/RestAPI/Administration.php:165
+msgid "Next, Connect Stripe in Test Mode"
+msgstr ""
+
+#: app/RestAPI/Administration.php:173
+msgid "Next, Connect Stripe in Live Mode"
+msgstr ""
+
+#: app/RestAPI/Administration.php:181
+msgid "Next, Select a Template"
+msgstr ""
+
+#: app/RestAPI/Administration.php:182
+msgid "Select a Template"
+msgstr ""
+
+#: app/RestAPI/Administration.php:228
+#: app/RestAPI/Administration.php:296
+#: app/RestAPI/Payment.php:30
+#: app/RestAPI/PaymentGateway.php:117
+#: app/RestAPI/PaymentGateway.php:159
+#: app/RestAPI/PaymentGateway.php:193
+#: app/RestAPI/PaymentGateway.php:242
+#: app/RestAPI/PaymentGateway.php:291
+#: app/RestAPI/PaymentGateway.php:344
+#: app/RestAPI/PaymentGateway.php:385
+#: app/RestAPI/PaymentGateway.php:421
+#: app/RestAPI/Plugin.php:44
+#: app/RestAPI/Plugin.php:113
+#: app/RestAPI/Stripe.php:64
+#: app/RestAPI/Stripe.php:153
+#: app/RestAPI/Stripe.php:229
+#: app/RestAPI/Stripe.php:285
+#: app/RestAPI/Stripe.php:340
+#: app/RestAPI/Stripe.php:473
+#: app/RestAPI/Stripe.php:519
+#: app/RestAPI/Stripe.php:584
+#: app/RestAPI/Tagging.php:47
+msgid "Missing request param %s"
+msgstr ""
+
+#: app/RestAPI/Administration.php:308
+msgid "Could not retrieve template, please try again."
+msgstr ""
+
+#: app/RestAPI/Administration.php:371
+msgid "Import Success, %s"
+msgstr ""
+
+#: app/RestAPI/Administration.php:371
+msgid "Edit Page"
+msgstr ""
+
+#: app/RestAPI/Administration.php:380
+msgid "General"
+msgstr ""
+
+#: app/RestAPI/Administration.php:384
+msgid "Style"
+msgstr ""
+
+#: app/RestAPI/Payment.php:48
+msgid "Invalid id & secret combination"
+msgstr ""
+
+#: app/RestAPI/Payment.php:61
+msgid "Already paid, cannot update details %s"
+msgstr ""
+
+#: app/RestAPI/PaymentGateway.php:147
+#: app/RestAPI/PaymentGateway.php:172
+#: app/RestAPI/PaymentGateway.php:206
+#: app/RestAPI/PaymentGateway.php:255
+msgid "Invalid payment gateway %s"
+msgstr ""
+
+#: app/RestAPI/PaymentGateway.php:306
+#: app/RestAPI/PaymentGateway.php:409
+#: app/RestAPI/PaymentGateway.php:437
+msgid "Invalid payment gateway"
+msgstr ""
+
+#: app/RestAPI/PaymentGateway.php:357
+#: app/RestAPI/PaymentGateway.php:368
+#: app/RestAPI/PaymentGateway.php:397
+msgid "Invalid Credentials..."
+msgstr ""
+
+#: app/RestAPI/PaymentGateway.php:450
+msgid "Invalid payment method"
+msgstr ""
+
+#: app/RestAPI/Plugin.php:54
+#: app/RestAPI/Plugin.php:123
+msgid "Plugin install not allowed."
+msgstr ""
+
+#: app/RestAPI/Plugin.php:139
+msgid "Plugin Activation not allowed."
+msgstr ""
+
+#: app/RestAPI/Stripe.php:296
+msgid "Invalid email address provided : %s"
+msgstr ""
+
+#: app/RestAPI/Stripe.php:538
+msgid "Payment failed. Please try again."
+msgstr ""
+
+#: app/RestAPI/Stripe.php:613
+msgid "Invalid Request"
+msgstr ""
+
+#: app/RestAPI/Stripe.php:633
+#: app/RestAPI/Stripe.php:652
+msgid "Failed to connect bank account, please try again"
+msgstr ""
+
+#: app/RestAPI/Stripe.php:721
+#: app/RestAPI/Stripe.php:734
+msgid "Plaid is not configured"
+msgstr ""
+
+#: app/RestAPI/Tagging.php:58
+msgid "Invalid email address provided."
+msgstr ""
+
+#: app/RestAPI/Tagging.php:82
+msgid "An unexpected error has happened, please try again"
+msgstr ""
+
+#: app/RestAPI/Webhook.php:50
+msgid "%s not found"
+msgstr ""
+
+#: app/RestAPI/Webhook.php:77
+msgid "Invalid Payload"
+msgstr ""
+
+#: app/RestAPI/Webhook.php:87
+msgid "Event not tracked, %s metadata not attached"
+msgstr ""
+
+#: app/RestAPI/Webhook.php:97
+msgid "Event not tracked, %s metadata does not match"
+msgstr ""
+
+#: app/RestAPI/Webhook.php:107
+msgid "Event not tracked"
+msgstr ""
+
+#: app/RestAPI/Webhook.php:124
+msgid "Handled Callback"
+msgstr ""
+
+#: app/SiteHealth.php:25
+msgid "%s - Database Integrity"
+msgstr ""
+
+#: app/SiteHealth.php:34
+msgid "%s uses custom tables to store data efficiently."
+msgstr ""
+
+#: app/SiteHealth.php:40
+msgid "%s - Valid DB Table Structure."
+msgstr ""
+
+#: app/SiteHealth.php:43
+#: app/SiteHealth.php:53
+msgid "Critical"
+msgstr ""
+
+#: app/SiteHealth.php:50
+msgid "%s - Invalid DB Table Structure."
+msgstr ""
+
+#: app/SiteHealth.php:59
+msgid "Fix Table Integrity"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Controls/FormFields.php:76
+msgid "Label"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Controls/FormFields.php:81
+msgid "Placeholder"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Controls/FormFields.php:85
+msgid "Is Required"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Controls/FormFields.php:89
+msgid "Hide on checkout"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Controls/FormFields.php:94
+#: app/_functions/administration-payment-form.php:88
+#: app/_functions/administration-payment-form.php:96
+#: app/_functions/elementor.php:175
+msgid "Width"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Controls/FormFields.php:104
+msgid "Size Mobile"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentForm.php:59
+msgid "Payment Page - Form"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/ActionsForm.php:230
+msgid "Redirect to URL after Sucessful Payment"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:71
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:136
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:110
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:147
+msgid "Title Color"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:83
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:148
+#: app/_functions/elementor.php:308
+msgid "Typography"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:85
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:150
+#: app/_functions/administration-payment-form.php:42
+#: app/_functions/administration-payment-form.php:64
+#: app/_functions/elementor.php:101
+#: app/_functions/elementor.php:310
+#: app/_functions/elementor.php:355
+msgid "Default"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:86
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:151
+#: app/_functions/elementor.php:311
+#: app/_functions/elementor.php:356
+msgid "Custom"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:94
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:159
+#: app/_functions/administration-payment-form.php:19
+#: app/_functions/elementor.php:316
+msgid "Font Family"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Form.php:103
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:168
+#: app/_functions/administration-payment-form.php:28
+#: app/_functions/elementor.php:321
+msgid "Size"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:224
+msgid "Item Spacing"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PaymentGateways.php:243
+msgid "Image Height"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/PricingPlans.php:93
+msgid " Pricing Plans"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubmitButtonControl.php:21
+msgid "Drag to reorder fields:"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/SubmitButtonControl.php:23
+msgid "Type your title here"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:27
+msgid "Personal Plan"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:30
+msgid "Recurring subscription payments."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:31
+msgid "Custom payment amounts."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:32
+msgid "Subscription frequency selector."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:33
+msgid "New payment gateways."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:34
+msgid "10 fully customizable templates."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:45
+msgid "Pro Plan (coming soon!)"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:48
+msgid "WooCommerce integration."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:49
+msgid "3rd party integrations."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:50
+msgid "Upsells / bundles."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:51
+msgid "Cart abandonment recovery."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:52
+msgid "More customizable templates."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:61
+msgid "Agency Plan (coming soon!)"
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:64
+msgid "Create a multi-vendor marketplace."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:65
+msgid "Onboard vendors to your marketplace with Stripe Connect."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:66
+msgid "Assign each payment form to a different vendor, and charge a marketplace fee."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:77
+msgid "Vote for the next feature you want to see on our %s."
+msgstr ""
+
+#: app/ThirdPartyIntegration/Elementor/Widgets/PaymentFormSections/Upgrade.php:78
+msgid "Roadmap"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:11
+msgid "font-color"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:38
+msgid "Font Weight"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:43
+#: app/_functions/elementor.php:102
+msgid "Normal"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:44
+#: app/_functions/elementor.php:103
+msgid "Bold"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:60
+msgid "Font Transform"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:65
+msgid "Uppercase"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:66
+msgctxt "Typography Control"
+msgid "Lowercase"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:67
+msgctxt "Typography Control"
+msgid "Capitalize"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:68
+msgctxt "Typography Control"
+msgid "Normal"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:80
+#: app/_functions/elementor.php:148
+msgid "Color"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:105
+msgid "Border Radius"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:129
+msgid "One-time"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:130
+msgid "Daily"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:131
+msgid "Weekly"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:132
+msgid "Monthly"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:133
+msgid "Quarterly"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:134
+msgid "Every 6 months"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:135
+msgid "Annually"
+msgstr ""
+
+#: app/_functions/administration-payment-form.php:136
+msgid "Every 3 years"
+msgstr ""
+
+#: app/_functions/elementor.php:239
+msgid "On/Off"
+msgstr ""
+
+#: app/_functions/elementor.php:282
+msgid "Margin"
+msgstr ""
+
+#: app/_functions/elementor.php:353
+msgid "Box Shadow"
+msgstr ""
+
+#: app/_functions/general.php:138
+msgid "No results found."
+msgstr ""
+
+#: app/_functions/general.php:139
+msgid "Request cancelled"
+msgstr ""
+
+#: app/_functions/general.php:140
+msgid "Failed to fetch asset required to display this section, please refresh and try again, if this error persists, contact support for assistance."
+msgstr ""
+
+#: app/_functions/general.php:141
+msgid "Delete"
+msgstr ""
+
+#: app/_functions/general.php:142
+msgid "Add"
+msgstr ""
+
+#: lib/migrations/version-1.2.1.php:5
+msgid "Database Migration."
+msgstr ""
+
+#: templates/admin/payment-form-add.php:489
+msgid "Native Payment Form"
+msgstr ""
+
+#: templates/admin/payment-form-add.php:490
+msgid "Elementor Form"
+msgstr ""
+
+#: templates/admin/payment-form-add.php:493
+msgid "A shortcode can be used to place payment forms anywhere on your site."
+msgstr ""
+
+#: templates/admin/payment-form-add.php:494
+msgid "A page will be created using the Payment Page Elementor widget."
+msgstr ""
+
+#: templates/admin/payment-form-add.php:552
+msgid "Name your Payment Form"
+msgstr ""
+
+#: templates/admin/payment-form-add.php:561
+msgid "Create a new Payment Form"
+msgstr ""
+
+#: templates/admin/payment-form-edit.php:277
+msgid "Draft"
+msgstr ""
+
+#: templates/admin/payment-form-edit.php:281
+msgid "Active"
+msgstr ""

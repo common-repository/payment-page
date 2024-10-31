@@ -1,0 +1,105 @@
+@import '../../mixins.scss';
+
+[data-payment-page-component="builder"] {
+  display : flex;
+  flex-direction: row;
+  background-color: var( --payment-page-layout-primary-background-color );
+  border: 1px solid #DAE4F1;
+  @include border-radius( 10px );
+
+  > [data-payment-page-component-builder-section="settings"] {
+    padding: 0;
+    margin: 0 var( --payment-page-spacing-sm ) 0 0;
+    border-right : 1px solid var( --payment-page-layout-primary-border-color );
+    width : 400px;
+
+    @include border-radius( 10px 0 0 10px );
+
+    > [data-payment-page-component-builder-section="header"] {
+      display : flex;
+      flex-direction: row;
+
+      @include border-radius( 10px 0 0 0 );
+
+      > [data-payment-page-component-builder-trigger] {
+        box-sizing : border-box;
+        width      : 50%;
+        text-align : center;
+        display    : flex;
+        flex-direction : column;
+
+        > span {
+          padding    : var( --payment-page-spacing-sm ) var( --payment-page-spacing-md );
+          font-size  : 18px;
+        }
+
+        &[data-payment-page-interaction-state="inactive"] {
+          cursor : pointer;
+        }
+
+        &[data-payment-page-interaction-state="active"] {
+          background : var( --payment-page-primary-color );
+          color : #fff;
+        }
+        
+        &[data-payment-page-component-builder-trigger="show_section_content"] {
+          @include border-radius( 10px 0 0 0 );
+        }
+      }
+    }
+
+    > [data-payment-page-component-builder-section="sections_wrapper"] {
+      display : flex;
+      flex-direction: column;
+
+      > div {
+        border-bottom : 1px solid var( --payment-page-layout-primary-border-color );
+
+        > p {
+          --payment-page-icon-primary-color : var( --payment-page-primary-color );
+          display : flex;
+          flex-direction: row;
+          align-content: center;
+          align-items : center;
+          gap : var( --payment-page-spacing-sm );
+          padding : 0 var( --payment-page-spacing-sm );
+          color : var( --payment-page-primary-color );
+          font-size : 16px;
+          line-height : 1.5em;
+
+          > svg {
+            width : 16px;
+            height : 16px;
+            @include payment-page-icon-primary();
+          }
+        }
+
+        > div {
+          padding : var( --payment-page-spacing-sm ) var( --payment-page-spacing-md );
+        }
+
+        &[data-payment-page-interaction-state="open"] {
+          padding-bottom : var( --payment-page-spacing-sm );
+        }
+
+        &[data-payment-page-interaction-state="closed"] {
+          > p {
+            cursor : pointer;
+
+            > svg {
+              rotate: 270deg;
+            }
+          }
+          > div {
+            display : none !important;
+          }
+        }
+      }
+    }
+  }
+
+  > [data-payment-page-component-builder-section="preview"] {
+    width : calc( 100% - var(--payment-page-spacing-sm) - var(--payment-page-spacing-sm) - 1px - 400px );
+    margin: 0 var(--payment-page-spacing-sm) 0 0;
+  }
+}

@@ -1,0 +1,155 @@
+= 1.3.9 =
+* Translation fixes.
+
+= 1.3.8 =
+* Translation fixes.
+
+= 1.3.7 =
+* Translation fixes. 
+* Freemius SDK update. 
+
+= 1.3.6 =
+* Fix to Stripe return URL.
+* Minor UI/template changes. 
+
+= 1.3.5 =
+* Update to template importing.
+* Other general UI changes. 
+
+= 1.3.4 =
+* Subscriptions now included in free version! 
+* Stripe library update.
+
+= 1.3.3 =
+* Fix to Plaid/ACH activation. 
+
+= 1.3.2 =
+* New custom payment form builder! 
+
+= 1.3.1 =
+* Code formatting improvements.
+* Update Freemius SDK. 
+
+= 1.3 =
+* Updates to formatting of payment confirmation emails.
+* Fixes to non-decimal currencies charging incorrectly. 
+* Update Freemius SDK. 
+
+= 1.2.9 =
+* Update Freemius SDK. 
+
+= 1.2.8 = 
+* Improved the methods for storing Stripe and PayPal transaction details in the database. 
+* Added Paypal transaction description to be from the pricing plan name. 
+* Migration bugfix. 
+* Decreased the size of a loading animation GIF to just 22kb. 
+
+= 1.2.7 =
+* Updated Freemius SDK to v2.4.5. 
+
+= 1.2.6 =
+* Added Payment Description field to show up properly in Stripe receipts (matches pricing name). 
+* Ensured submit button automatically activates when all fields are automatically pre-filled. 
+
+= 1.2.5 =
+* Added polyfill function to properly handle webhooks. 
+* Fix for database migration issues. 
+
+= 1.2.4 =
+* Implemented confirmation emails for Admin and Payer. 
+* Implemented PayPal Webhooks to verify payments for Form Actions on Submit. 
+* Updated Freemius SDK to v2.4.4. 
+
+= 1.2.3 = 
+* Updates to custom actions on payment completion, which now includes the currently logged in user in the request. 
+
+= 1.2.2 = 
+* Added the option to have a different first payment amount in a subscription. 
+* Updates to the custom actions on payment completion. 
+
+= 1.2.1 = 
+* Zip code field is now optional. 
+* Added support for custom actions on payment completion. 
+
+= 1.2.0 = 
+* Updated Quick Setup to be optional.
+* Switched order of Templates and Gateways tabs to make Templates more readily available.
+* Enabled Demo mode on the payment form to display without any gateways connected.
+* Made Custom Payment Amounts available in the free version. 
+* Made all Stripe payment methods available in the free version, except ACH via Plaid. 
+* Added Stripe platform fee in free version. 
+
+= 1.1.3 = 
+* Fix to German translation of SEPA mandate.
+* You can now prefill form fields with query string parameters. 
+* Added Action for sending HTTP request of form data to external URL. 
+
+= 1.1.2 =
+* SEPA mandate translated to German.
+* Better error handling for PayPal. 
+
+= 1.1.1.1 = 
+* Fix to PayPal integration where PayPal could not be disabled in some cases. 
+* Fix to Payment Method tabs not appearing in Free version with China Payments Plugin enabled. 
+* Improvements to settings layout. 
+
+= 1.1.1 = 
+* Update to Features Notifications section so you can more easily stay up to date when we release new features.  
+
+= 1.1 = 
+* Added PayPal Standard Integration! You can now accept one-time PayPal payments with the standard checkout flow that requires logging into a PayPal account.
+* Added Stripe Payment Methods Google Pay, Apple Pay, and Microsoft Pay. 
+* The Stripe + Plaid integration is now supported for ACH transactions. Register a Plaid account and utilize Stripe to allow customers to seamlessly make ACH payments with US-based bank accounts. 
+* Custom form fields are now supported.
+* Form fields can now be reordered.  
+* Desktop and mobile width settings are now available for form fields. 
+
+= 1.0.8 =
+* Added Stripe Payment Methods SEPA Direct Debit, WeChat Pay, and Alipay.
+* Tons of styling improvements and updates to the payment form.
+* Added Tabs and Payment Buttons mechanisms - now the payment form supports multiple payment options.
+* Stripe account name now appears next to TEST/LIVE switcher after connecting. 
+* TEST/LIVE mode button added to WP-Admin bar.
+* All 10 templates have had a huge makeover! 
+* SCA integration 100% implemented. 
+* We now show a little 'Payment Page' label next to each page where a payment form is detected.
+* Error message added if no gateway is connected. 
+* Added integration with China Payments Plugin. 
+
+= 1.0.7 =
+* Refactored Elementor payment form widget to vanilla JS/CSS.
+* Stripe now fully attaches customer details for one-time and recurring payments. 
+* Decimal issues for various currencies have been fully resolved. 
+* Improving the validation for multiple pricing plans being selected in the Elementor Widget. 
+
+= 1.0.6 =
+* New First Time UX and Settings area.
+* Major rebuild of Stripe Connect API. 
+* Fixes to Stripe Connect Onboarding.
+* Templates are now cached for retrieval once every hour instead of being loaded each time they are accessed. 
+
+= 1.0.5.1 =
+* Bugfix where payment form wasn't rendering properly in some cases. 
+
+= 1.0.5 =
+* Major styling fixes to the payment form.
+
+= 1.0.4 = 
+* Bug-fixes for opt-in form
+* Fixed redirection issue
+* Fixed filters not appearing in some cases
+* Fixed WP Admin styling components (typography conflict)
+
+= 1.0.3 = 
+* Added custom payment amounts
+* Prepared for AppSumo launch! 
+
+= 1.0.2 = 
+* Fixed subscriptions issue
+* Updated and prepared for AppSumo launch!
+
+= 1.0.1 = 
+* Major bug fixes to Elementor Widget and Setup Wizard.
+
+= 1.0 =
+* Our first version! Woo-hoo! 

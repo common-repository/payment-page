@@ -1,0 +1,1 @@
+jQuery(document).ready((function(){let e=jQuery("#toplevel_page_payment-page");if(e.hasClass("wp-menu-open")){let r=e.find("> ul > li"),n=r.find('a[href^="edit.php?post_type=pp_payment_form"]').parents("li:first");r.not(n).removeClass("current").find("a.current").removeClass("current"),n.addClass("current").find("a").addClass("current")}}));
